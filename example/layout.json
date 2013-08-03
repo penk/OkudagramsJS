@@ -1,0 +1,28 @@
+{
+    "title": { 
+        "action": [ "home", "lockscreen" ]
+    },
+
+    "status": {
+        "list": [ "battery", "network", "date/time" ]
+    },
+
+    "content": {
+        "button": [ "okay"],
+        "photo": ["starship"]
+    },
+
+
+    "description": {
+        "textarea": ["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."]
+    },
+
+    "gallery": {
+        "photo": ["anotherone"]
+    },
+
+    "login form": {
+        "input": ["user name", "password"], 
+        "button": ["login in"]
+    }
+}
