@@ -14,6 +14,8 @@ Item {
         height: parent.height + radius 
         radius: 30
         color: cornerColor
+        border.width: 3 
+        border.color: "black"
         anchors { 
             right: (type == 0 || type == 2) ? parent.right : undefined; 
             bottom: parent.bottom 

@@ -8,12 +8,17 @@ Rectangle {
     height: 600
     color: "black"
 
-    Component.onCompleted: Okudagrams.loadLayout("./example/layout.json");
+    property variant savedLayoutData: [""];
+    property variant jsonItems: [""];
+
+    Component.onCompleted: { 
+        Okudagrams.loadLayout("./example/layout.json");
+    }
 
     property variant colorScheme: ["#FF9900", "#CC99CC", "#9999CC", 
         "#CC6666", "#FFCC99", "#FF9966", "#9999FF", "#CC6699" ];
 
-    property variant savedLayoutData: [""];
+
     Component {
         id: container
         Rectangle {
@@ -21,19 +26,19 @@ Rectangle {
             border.color: "black"
             clip: true 
 
-            color: "black"
             property variant label: ""
-
-/*
+            
+            /*
             Corner {
+                //Component.onCompleted: if (visible) parent.color = "black"
                 anchors.margins: 3
                 visible: parent.height > 200 && parent.width > 100 // rand and decide by weight 
                 width: parent.width
                 height: parent.height
                 type: Math.floor(Math.random() * 4)
-                cornerColor: (parent.height > 200 && parent.width > 100) ? colorScheme[Math.floor(Math.random() * colorScheme.length)] : "black"
+                cornerColor: colorScheme[Math.floor(Math.random() * colorScheme.length)] 
             }
-*/
+            */
 
             MouseArea { 
                 anchors.fill: parent;
